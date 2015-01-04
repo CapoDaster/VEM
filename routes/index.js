@@ -36,7 +36,6 @@ module.exports = function(passport){
     /* GET Home Page */
     router.get('/home', isAuthenticated, function(req, res){
         res.sendFile(path.join(__dirname,'../public_html/app.html'));
-        //res.render('home', { user: req.user });
     });
 
     /* Handle Logout */
