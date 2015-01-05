@@ -21,22 +21,20 @@ module.exports = function(passport){
     /* GET login page. */
     router.get('/', function(req, res) {
         // Display the Login page with any flash message, if any
-        //res.render('index', { message: req.flash('message') });
-        res.sendFile(path.join(__dirname,'../static_views/login.html'));
+        res.render('login', { message: req.flash('message') });
     });
 
     /* Handle Login POST */
     router.post('/login', passport.authenticate('login', {
-        successRedirect: '/home',
+        successRedirect: '/home.html',
         failureRedirect: '/'
     }));
 
 
 
     /* GET Home Page */
-    router.get('/home', isAuthenticated, function(req, res){
+    router.get('/home.html', isAuthenticated, function(req, res){
         res.sendFile(path.join(__dirname,'../public_html/app.html'));
-        //res.render('home', { user: req.user });
     });
 
     /* Handle Logout */
@@ -45,6 +43,10 @@ module.exports = function(passport){
         res.redirect('/');
     });
 
+    /* Get the current users information*/
+    router.get('/users/whoami', isAuthenticated, function(req, res){
+        res.json(req.user);
+    });
     /* Static Routing */
     router.use(express.static(path.join(__dirname, '../public_html')));
 

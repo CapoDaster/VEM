@@ -1,0 +1,8 @@
+To Do:
+- remove deprecation warnings
+- couchdb should have a folder which contains everythin to initialize it
+- user login requests the whole user document from database, that is not necassary
+- write readme
+- fix package.json dependencies
+- clean server.js from unused stuff (jade, etc)
+- add notification within login.html

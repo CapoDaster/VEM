@@ -3,7 +3,7 @@
  */
 var LocalStrategy   = require('passport-local').Strategy;
 var User = require('../db_query/User');
-var bCrypt = require('bcrypt-nodejs');
+
 
 module.exports = function(passport){
 
@@ -29,7 +29,7 @@ module.exports = function(passport){
                         }
                         // User and password both match, return user from done method
                         // which will be treated like success
-                        console.log(user);
+                        //console.log(user);
                         return done(null, user);
                     }
                 );
@@ -39,7 +39,7 @@ module.exports = function(passport){
 
 
     var isValidPassword = function(user, password){
-        console.log("Entered password: " + password + " User password:" + user.password);
+        //console.log("Entered password: " + password + " User password:" + user.password);
         return password == user.password;
     }
 
