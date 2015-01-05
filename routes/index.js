@@ -21,8 +21,7 @@ module.exports = function(passport){
     /* GET login page. */
     router.get('/', function(req, res) {
         // Display the Login page with any flash message, if any
-        //res.render('index', { message: req.flash('message') });
-        res.sendFile(path.join(__dirname,'../static_views/login.html'));
+        res.render('login', { message: req.flash('message') });
     });
 
     /* Handle Login POST */
@@ -44,6 +43,10 @@ module.exports = function(passport){
         res.redirect('/');
     });
 
+    /* Get the current users information*/
+    router.get('/users/whoami', isAuthenticated, function(req, res){
+        res.json(req.user);
+    });
     /* Static Routing */
     router.use(express.static(path.join(__dirname, '../public_html')));
 
