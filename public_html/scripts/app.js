@@ -3,12 +3,12 @@
  */
 "use strict";
 
-var app = angular.module('app', ['app.users']);
+var app = angular.module('app', ['ngRoute','app.overview','app.users']);
 
-app.run( function () {
-    console.log ("run");
-});
-
-app.config ( function () {
+app.config (['$routeProvider', function ($routeProvider) {
     console.log ("config");
-});
+    $routeProvider.otherwise({
+        redirectTo: '/overview'
+    });
+}]);
+

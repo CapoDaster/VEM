@@ -26,14 +26,14 @@ module.exports = function(passport){
 
     /* Handle Login POST */
     router.post('/login', passport.authenticate('login', {
-        successRedirect: '/home',
+        successRedirect: '/home.html',
         failureRedirect: '/'
     }));
 
 
 
     /* GET Home Page */
-    router.get('/home', isAuthenticated, function(req, res){
+    router.get('/home.html', isAuthenticated, function(req, res){
         res.sendFile(path.join(__dirname,'../public_html/app.html'));
     });
 

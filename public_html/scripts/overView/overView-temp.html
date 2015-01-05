@@ -1,0 +1,25 @@
+    <div class="jumbotron">
+        <h3>Hallo {{::user.firstName}}!</h3>
+        <p>Hier soll demnächst noch was kommen!
+            <a href="#/list">LIST</a>
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Deine Nutzerinfos:</h2>
+            <p>{{::user | json}}</p>
+        </div>
+        <div class="col-lg-6">
+            <h2>Hier kann man auch noch was reinschreiben:</h2>
+            <p>bla bla bla</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+            <footer>
+                <p>© Copyright 2015 Simon Heeg </p>
+            </footer>
+        </div>
+    </div>
+
