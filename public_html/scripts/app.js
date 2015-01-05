@@ -3,7 +3,7 @@
  */
 "use strict";
 
-var app = angular.module('app', ['ngRoute','app.overview','app.users']);
+var app = angular.module('app', ['ngRoute','app.overview','app.users','app.userEditView']);
 
 app.config (['$routeProvider', function ($routeProvider) {
     console.log ("config");

@@ -1,0 +1,29 @@
+    <div class="jumbotron">
+        <h3>Edit {{::user.firstName}}!</h3>
+        <form class="form-horizontal" role="form" name="myForm" novalidate>
+            <div class="form-group">
+                <label for="firstname" class="col-sm-2 control-label">Vorname</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           required
+                           id="firstname"
+                           name="firstname"
+                           minlength="2"
+                           value="{{::user.firstName}}">
+                </div>
+                <label for="lastname" class="col-sm-2 control-label">Nachname</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           required
+                           id="firstname"
+                           name="lastname"
+                           minlength="2"
+                           value="{{::user.lastName}}">
+                </div>
+
+            </div>
+        </form>
+    </div>
+
