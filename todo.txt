@@ -6,3 +6,4 @@ To Do:
 - fix package.json dependencies
 - clean server.js from unused stuff (jade, etc)
 - add notification within login.html
+- login with password hash

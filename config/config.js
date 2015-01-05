@@ -13,7 +13,7 @@ exports.serverconfig = {
 exports.dbconfig = {
     host: 'http://localhost',
     port: 5984,
-    database: "sample_users",
+    database: "vem",
     username: "simonHeeg",
     password: "password"
 };
