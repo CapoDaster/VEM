@@ -16,11 +16,13 @@
 
     <script src="./scripts/userEditView/userEditView-module.js"></script>
 
-    <script src="./scripts/users/users-controller.js"></script>
+    <script src="./scripts/pwChangeView/pwChangeView-module.js"></script>
+
+    <script src="./scripts/users/users-module.js"></script>
 
     <script src="./scripts/app.js"></script>
 </head>
-<body ng-app="app" ng-controller="userCtrl">
+<body ng-app="app">
 
 <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -37,10 +39,17 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-                <li><a href="#/overview">Übersicht</a></li>
+                <li><a href="#/overview"><span class="glyphicon glyphicon-eye-open"></span> Übersicht</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/signout"><span class="glyphicon glyphicon-off"></span> Abmelden</a></li>
+                <li class="dropdown">
+                    <a href="" data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-cog"></span><b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/pwChangeView">Passwort ändern</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/signout"><span class="glyphicon glyphicon-off"></span> Abmelden</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
